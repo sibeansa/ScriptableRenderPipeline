@@ -11,7 +11,7 @@ using UnityEditor.ShaderGraph;
 namespace UnityEditor.Experimental.Rendering.LWRP
 {
     [Serializable]
-    [Title("Master", "Sprite Unlit")]
+    [Title("Master", "Sprite Unlit (Experimental)")]
     class SpriteUnlitMasterNode : MasterNode<ISpriteUnlitSubShader>, IMayRequirePosition
     {
         public const string PositionName = "Position";
@@ -30,7 +30,7 @@ namespace UnityEditor.Experimental.Rendering.LWRP
         public sealed override void UpdateNodeAfterDeserialization()
         {
             base.UpdateNodeAfterDeserialization();
-            name = "Sprite Unlit Master";
+            name = "Sprite Unlit Master (Experimental)";
 
             AddSlot(new PositionMaterialSlot(PositionSlotId, PositionName, PositionName, CoordinateSpace.Object, ShaderStageCapability.Vertex));
             AddSlot(new ColorRGBAMaterialSlot(ColorSlotId, ColorSlotName, ColorSlotName, SlotType.Input, Color.white, ShaderStageCapability.Fragment));
